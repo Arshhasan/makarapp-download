@@ -1,4 +1,4 @@
-
+<!-- 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -138,5 +138,181 @@
   </div>
 
   <img class="logo" src="logo.png" alt="Makara Logo" />
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Makara App Download</title>
+  <link rel="icon" href="logo.png" type="image/png" />
+
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #d4edda;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    header {
+      width: 100%;
+      background-color: #28a745;
+      color: white;
+      padding: 1rem 0;
+      text-align: center;
+      font-size: 1.25rem;
+      font-weight: bold;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
+
+    .toggle-btn {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background-color: white;
+      border: none;
+      border-radius: 20px;
+      padding: 0.4rem 0.8rem;
+      cursor: pointer;
+      font-size: 0.9rem;
+      color: #28a745;
+      font-weight: bold;
+    }
+
+    .container {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      width: 85%;
+      max-width: 350px;
+      margin-top: 3rem;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    a.download-link {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background-color: #007BFF;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: background-color 0.3s ease;
+    }
+
+    a.download-link:hover {
+      background-color: #0056b3;
+    }
+
+    .instructions {
+      margin-top: 1rem;
+      font-size: 0.95rem;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      text-align: left;
+    }
+
+    .instructions span::before {
+      content: "➡️ ";
+    }
+
+    .logo {
+      margin-top: 2rem;
+      max-width: 150px;
+      width: 80%;
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 1rem;
+        max-width: 300px;
+      }
+
+      h1 {
+        font-size: 1.25rem;
+      }
+
+      a.download-link {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.95rem;
+      }
+
+      .toggle-btn {
+        font-size: 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <span id="header-text">Makara App - CDN Download</span>
+    <button class="toggle-btn" onclick="toggleLanguage()">मराठी</button>
+  </header>
+
+  <div class="container">
+    <h1 id="main-heading">Download Makara App</h1>
+    <a class="download-link" href="makara_3.1.1+2025041803.apk" download id="download-btn">
+      Download APK
+    </a>
+    <div class="instructions" id="instructions">
+      <span id="step1">Open the Downloads folder</span>
+      <span id="step2">Tap the downloaded APK file</span>
+      <span id="step3">Allow installation from unknown sources if prompted</span>
+    </div>
+  </div>
+
+  <img class="logo" src="logo.png" alt="Makara Logo" />
+
+  <script>
+    let isMarathi = false;
+
+    const translations = {
+      en: {
+        header: "Makara App - CDN Download",
+        main: "Download Makara App",
+        download: "Download APK",
+        step1: "Open the Downloads folder",
+        step2: "Tap the downloaded APK file",
+        step3: "Allow installation from unknown sources if prompted",
+        toggle: "मराठी"
+      },
+      mr: {
+        header: "मकारा अ‍ॅप - CDN डाउनलोड",
+        main: "मकारा अ‍ॅप डाउनलोड करा",
+        download: "APK डाउनलोड करा",
+        step1: "डाउनलोड्स फोल्डर उघडा",
+        step2: "डाउनलोड केलेल्या APK फाइलवर टॅप करा",
+        step3: "अनओन सोर्सेसवरून इन्स्टॉल करण्याची परवानगी द्या",
+        toggle: "English"
+      }
+    };
+
+    function toggleLanguage() {
+      isMarathi = !isMarathi;
+      const lang = isMarathi ? "mr" : "en";
+      document.getElementById("header-text").textContent = translations[lang].header;
+      document.getElementById("main-heading").textContent = translations[lang].main;
+      document.getElementById("download-btn").textContent = translations[lang].download;
+      document.getElementById("step1").textContent = translations[lang].step1;
+      document.getElementById("step2").textContent = translations[lang].step2;
+      document.getElementById("step3").textContent = translations[lang].step3;
+      document.querySelector(".toggle-btn").textContent = translations[lang].toggle;
+    }
+  </script>
 </body>
 </html>
