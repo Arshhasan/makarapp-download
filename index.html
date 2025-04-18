@@ -39,7 +39,7 @@
       font-size: 0.9rem;
       color: #28a745;
       font-weight: bold;
-      margin-top: 1rem; /* Add margin for spacing below the green bar */
+      margin-top: 1rem;
     }
 
     .container {
@@ -133,25 +133,24 @@
 </head>
 <body>
   <header>
-    <span id="header-text">Makara App - CDN Download</span>
+    <span id="header-text"><strong>Makara App</strong> - CDN Download</span>
     <button class="toggle-btn" onclick="toggleLanguage()">मराठी</button>
   </header>
-  
 
   <div class="container">
     <h1 id="main-heading">Download Makara App</h1>
     <a class="download-link" href="makara_3.1.1+2025041803.apk" download id="download-btn">
-      Download APK
+      <strong>Download APK</strong>
     </a>
 
     <div class="instructions">
       <h2 id="install-title">How to Install</h2>
       <ol>
-        <li id="step1">📥 Download the APK</li>
+        <li id="step1">📥 <strong>Download</strong> the APK</li>
         <li id="step2">📂 Open your <strong>Downloads</strong> folder</li>
-        <li id="step3">⚙️ Tap the APK file</li>
+        <li id="step3">⚙️ <strong>Tap</strong> the APK file</li>
         <li id="step4">🔐 Allow installation from <strong>unknown sources</strong> if prompted</li>
-        <li id="step5">✅ Enjoy the Makara app!</li>
+        <li id="step5">✅ Enjoy the <strong>Makara App</strong>!</li>
       </ol>
     </div>
   </div>
@@ -163,27 +162,27 @@
 
     const translations = {
       en: {
-        header: "Makara App - CDN Download",
-        main: "Download Makara App",
-        download: "Download APK",
-        install: "How to Install",
-        step1: "📥 Download the APK",
-        step2: "📂 Open your Downloads folder",
-        step3: "⚙️ Tap the APK file",
-        step4: "🔐 Allow installation from unknown sources if prompted",
-        step5: "✅ Enjoy the Makara app!",
+        header: "<strong>Makara App</strong> - CDN Download",
+        main: "<strong>Download Makara App</strong>",
+        download: "<strong>Download APK</strong>",
+        install: "<strong>How to Install</strong>",
+        step1: "📥 <strong>Download</strong> the APK",
+        step2: "📂 Open your <strong>Downloads</strong> folder",
+        step3: "⚙️ <strong>Tap</strong> the APK file",
+        step4: "🔐 Allow installation from <strong>unknown sources</strong> if prompted",
+        step5: "✅ Enjoy the <strong>Makara App</strong>!",
         toggle: "मराठी"
       },
       mr: {
-        header: "मकारा अ‍ॅप - CDN डाउनलोड",
-        main: "मकारा अ‍ॅप डाउनलोड करा",
-        download: "APK डाउनलोड करा",
-        install: "इंस्टॉल कसे करावे",
-        step1: "📥 APK डाउनलोड करा",
-        step2: "📂 तुमचा डाउनलोड्स फोल्डर उघडा",
-        step3: "⚙️ APK फाइलवर टॅप करा",
-        step4: "🔐 विचारल्यास 'unknown sources' वरून इंस्टॉलेशनला परवानगी द्या",
-        step5: "✅ मकारा अ‍ॅपचा आनंद घ्या!",
+        header: "<strong>मकारा अ‍ॅप</strong> - CDN डाउनलोड",
+        main: "<strong>मकारा अ‍ॅप डाउनलोड करा</strong>",
+        download: "<strong>APK डाउनलोड करा</strong>",
+        install: "<strong>इंस्टॉल कसे करावे</strong>",
+        step1: "📥 <strong>APK डाउनलोड करा</strong>",
+        step2: "📂 तुमचा <strong>डाउनलोड्स</strong> फोल्डर उघडा",
+        step3: "⚙️ <strong>APK फाइलवर टॅप करा</strong>",
+        step4: "🔐 विचारल्यास <strong>'unknown sources'</strong> वरून इंस्टॉलेशनला परवानगी द्या",
+        step5: "✅ <strong>मकारा अ‍ॅपचा आनंद घ्या!</strong>",
         toggle: "English"
       }
     };
@@ -191,15 +190,15 @@
     function toggleLanguage() {
       isMarathi = !isMarathi;
       const lang = isMarathi ? 'mr' : 'en';
-      document.getElementById('header-text').textContent = translations[lang].header;
-      document.getElementById('main-heading').textContent = translations[lang].main;
-      document.getElementById('download-btn').textContent = translations[lang].download;
-      document.getElementById('install-title').textContent = translations[lang].install;
-      document.getElementById('step1').textContent = translations[lang].step1;
-      document.getElementById('step2').textContent = translations[lang].step2;
-      document.getElementById('step3').textContent = translations[lang].step3;
-      document.getElementById('step4').textContent = translations[lang].step4;
-      document.getElementById('step5').textContent = translations[lang].step5;
+      document.getElementById('header-text').innerHTML = translations[lang].header;
+      document.getElementById('main-heading').innerHTML = translations[lang].main;
+      document.getElementById('download-btn').innerHTML = translations[lang].download;
+      document.getElementById('install-title').innerHTML = translations[lang].install;
+      document.getElementById('step1').innerHTML = translations[lang].step1;
+      document.getElementById('step2').innerHTML = translations[lang].step2;
+      document.getElementById('step3').innerHTML = translations[lang].step3;
+      document.getElementById('step4').innerHTML = translations[lang].step4;
+      document.getElementById('step5').innerHTML = translations[lang].step5;
       document.querySelector('.toggle-btn').textContent = translations[lang].toggle;
     }
   </script>
