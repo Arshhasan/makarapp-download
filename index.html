@@ -130,6 +130,15 @@
       }
     }
   </style>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
 </head>
 <body>
   <header>
@@ -142,7 +151,7 @@
     <!-- <a class="download-link" href="makara_3.1.1+2025041803.apk" download id="download-btn">
       <strong>Download APK</strong>
     </a> -->
-    <a class="download-link" href="http://bit.ly/3YEB4lE" download id="download-btn">
+    <a class="download-link" onclick="gtag('event', 'download_apk');" href="https://github.com/Arshhasan/makarapp-download/releases/download/3.1.1%2B2025041803.apk/makara_3.1.1+2025041803.apk" download id="download-btn">
       <strong>Download APK</strong>
     </a>
     
